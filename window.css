@@ -1,0 +1,11 @@
+html, body {
+    overflow-y: visible;
+}
+
+span.step {
+    display: none;
+}
+
+.important {
+	color: #FF0000
+}

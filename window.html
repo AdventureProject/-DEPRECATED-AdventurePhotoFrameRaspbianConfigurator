@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>PhotoFrame Configurator</title>
+	<link rel="stylesheet" type="text/css" href="window.css">
+  </head>
+
+  <body>
+	<h1>PhotoFrame Configurator</h1>
+	Welcome to the PhotoFrame Configurator, please follow the steps below to setup your PhotoFrame's WiFi connection.<br />
+	<br />
+	
+	<button id="get_started">Let's get Started!</button>
+
+	<span class="step" id="step_1">
+		<h2>Step 1: Select the USB drive titled <q><strong>CONFG</strong></q></h2>
+		<em class="important">Please ensure that you have inserted the special Config USB drive that came with your PhotoFrame.</em><br />
+		<button id="find_devices">Find Config Key</button>
+	</span>
+	
+	<span class="step" id="step_2">
+		<h2>Step 2: Enter your WiFi network's name (<strong>SSID</strong>)</h2>
+		<input type="text" id="ssid" name="ssid" placeholder="SSID">
+	</span>
+	
+	<span class="step" id="step_3">
+		<h2>Step 3: Enter your WiFi network's password (<strong>WPA-PSK</strong>)</h2>
+		<em>Currently only WPA-PSK network keys are supported.</em><br />
+		<input type="text" id="key" name="key" placeholder="password">
+	</span>
+	
+	<span class="step" id="step_4">
+		<h2>Step 4: Write Config to USB Config Key</h2>
+		<button id="write_config">Write Config</button>
+	</span>
+	
+	<span class="step" id="step_5">
+		<h2>Step 5: Remove Config Key, and insert into PhotoFrame. Wait 5 seconds, then remove Config Key.</h2>
+		<em>Your PhotoFrame should reboot and it should now be on your WiFi network!</em>
+	</span>
+	
+	<script src="jquery-3.0.0.min.js"></script>
+	<script src="main.js"></script>
+  </body>
+  
+</html>
