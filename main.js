@@ -24,46 +24,36 @@ function findDevices()
 	}
 	
 	chrome.fileSystem.chooseEntry(options, onDeviceSelected);
-	
-	//{"vendorId": 0930, "productId": 6545}
 }
 
 function ssidChanged(e)
 {
 	var val = $(this).val();
 	
-	if( $('#step_3').is(":visible") )
-	{
-		if( val.length <= 0 )
-		{
-			$('#step_3').fadeOut("slow");
-		}
-	}
-	else
-	{
-		if( val.length > 0 )
-		{
-			$('#step_3').delay('500').fadeIn("slow");
-		}
-	}
+	var val = $(this).val();
+	handleTextInput( '#step_3', val );
 }
 
 function keyChanged(e)
 {
 	var val = $(this).val();
-	
-	if( $('#step_4').is(":visible") )
+	handleTextInput( '#step_4', val );
+}
+
+function handleTextInput( elementId, val )
+{
+	if( $(elementId).is(":visible") )
 	{
 		if( val.length <= 0 )
 		{
-			$('#step_4').fadeOut("slow");
+			$(elementId).fadeOut("slow");
 		}
 	}
 	else
 	{
 		if( val.length > 0 )
 		{
-			$('#step_4').delay('500').fadeIn("slow");
+			$(elementId).delay('500').fadeIn("slow");
 		}
 	}
 }
