@@ -146,12 +146,13 @@ function createWpaSupplicant( ssid, password, security )
 var WPA_TEMPLATE = 
 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\n\
 update_config=1\n\
+country=US\n\
 \n\
 network={\n\
         ssid="__SSID__"\n\
         psk="__PASSWORD__"\n\
         key_mgmt=__SECURITY__\n\
-};';
+}';
 
 
 $(document).ready(function() {
