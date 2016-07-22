@@ -2,10 +2,44 @@ html, body {
     overflow-y: visible;
 }
 
-span.step {
+div.step {
     display: none;
 }
 
 .important {
 	color: #FF0000
+}
+
+.page-container {
+	padding: 10px;
+}
+
+.step-card-wide.mdl-card {
+  width: 450px;
+}
+
+.step-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background-color: #8BC34A;
+}
+
+.step_1 > .mdl-card__title {
+	background-color: #0288D1;
+}
+
+.step_2 > .mdl-card__title {
+	background-color: #512DA8;
+}
+
+.step_3 > .mdl-card__title {
+	background-color: #607D8B;
+}
+
+.step_4 > .mdl-card__title {
+	background-color: #7B1FA2;
+}
+
+.step_5 > .mdl-card__title {
+	background-color: #FF4081;
 }
